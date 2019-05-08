@@ -9,9 +9,8 @@ var fn = function(a, b, c) {
 var params = ['a', 'b', 'c'];
 
 // 三种写法：
+setTimeout(fn, 1000, 'a', 'b', 'c');
 setTimeout.apply(this, [fn, 1000].concat(params));
-
 setTimeout(fn, 1000, ...params);
 
-setTimeout(fn, 1000, 'a', 'b', 'c')
 
